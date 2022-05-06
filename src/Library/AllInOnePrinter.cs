@@ -14,6 +14,8 @@ namespace Full_GRASP_And_SOLID.Library
         File
     }
 
+    // Una vez utilizado polimorfismo, esta clase no se utiliza mas. 
+
     public class AllInOnePrinter
     {
         public void PrintRecipe(Recipe recipe, Destination destination)
