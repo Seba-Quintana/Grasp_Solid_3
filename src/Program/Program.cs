@@ -25,10 +25,22 @@ namespace Full_GRASP_And_SOLID
             recipe.FinalProduct = GetProduct("Café con leche");
             recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
-
+            
+            /*
+            // Solucion sin implementar polimorfismo:
             AllInOnePrinter printer = new AllInOnePrinter();
             printer.PrintRecipe(recipe, Destination.Console);
             printer.PrintRecipe(recipe, Destination.File);
+            */
+
+            // Solucion implementando polimorfismo
+
+            // Se crea printer2 de tipo IDestination en lugar de AllInOnePrinter
+            IDestination printer2;
+            printer2 = new ConsolePrinter();
+            printer2.PrintRecipe(recipe, Destination.Console);
+            printer2 = new FilePrinter();
+            printer2.PrintRecipe(recipe, Destination.File);
         }
 
         private static void PopulateCatalogs()
