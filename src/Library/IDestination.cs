@@ -8,6 +8,6 @@ namespace Full_GRASP_And_SOLID.Library
     IDestination, y dos clases que implementan la misma, ConsolePrinter y FilePrinter, */
     public interface IDestination
     {
-        void PrintRecipe(Recipe recipe, Destination destination);
+        void PrintRecipe(Recipe recipe);
     }
 }

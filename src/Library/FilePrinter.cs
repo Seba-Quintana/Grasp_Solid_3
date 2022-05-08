@@ -9,7 +9,7 @@ namespace Full_GRASP_And_SOLID.Library
     // en un archivo de texto.
     public class FilePrinter : IDestination
     {
-        public void PrintRecipe(Recipe recipe, Destination destination)
+        public void PrintRecipe(Recipe recipe)
         {
             File.WriteAllText("Recipe.txt", recipe.GetTextToPrint());
         }

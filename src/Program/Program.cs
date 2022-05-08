@@ -38,9 +38,9 @@ namespace Full_GRASP_And_SOLID
             // Se crea printer2 de tipo IDestination en lugar de AllInOnePrinter
             IDestination printer2;
             printer2 = new ConsolePrinter();
-            printer2.PrintRecipe(recipe, Destination.Console);
+            printer2.PrintRecipe(recipe);
             printer2 = new FilePrinter();
-            printer2.PrintRecipe(recipe, Destination.File);
+            printer2.PrintRecipe(recipe);
         }
 
         private static void PopulateCatalogs()
